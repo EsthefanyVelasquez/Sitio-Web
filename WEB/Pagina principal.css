@@ -1,0 +1,202 @@
+body {
+  width: 100%;
+  height: auto;
+  background-image: url('fondo.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", system-ui; 
+}
+
+header {
+  background-color: 0;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #043945;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    font-size: 20px; 
+    font-family: "Roboto Mono", system-ui; 
+  }
+
+header input {
+    padding: 5px;
+    border: 0 solid #ccc;
+    border-radius: 6px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 20px; 
+  }
+
+header {
+    background-color: 0;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+.container {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.content h1 {
+  color: #fff;
+  text-align: left;
+  margin-left: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li button,
+.search-bar {
+  background-color: #338598;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-bar::placeholder {
+  color: #fff;
+}
+
+.image-placeholder {
+  width: 827px;
+  height: 400px;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-container img,
+.rectangle {
+  width: 302px;
+  height: 75px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 190px;
+}
+
+.aside-container img {
+  width: 228px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #338598;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-decoration: underline;
+}
+
+.flex-container {
+  display: flex;
+  align-items: right;
+}
+
+.rectangle {
+  width: 800px;
+  height: 350px;
+  background-color: #fff;
+  margin: 20px auto;
+  top: 40px;
+  position: relative;
+  margin-right: 60px;
+  margin-left: 50px;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/517dab39-822a-4aec-87c3-a5e5ef70327a/d8fjhgz-53e7316a-bab0-47fb-bd2c-62b6133465c0.png/v1/fill/w_1192,h_670,q_70,strp/smite_no_god_wins_alone_wallpaper_by_utitake_d8fjhgz-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzUxN2RhYjM5LTgyMmEtNGFlYy04N2MzLWE1ZTVlZjcwMzI3YVwvZDhmamhnei01M2U3MzE2YS1iYWIwLTQ3ZmItYmQyYy02MmI2MTMzNDY1YzAucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.sULzsH_8B9mjnyq_9yCs8tVkm-VlogHuLnAOkdccn5A');
+  background-size: cover;
+}
+/* Estilos para las imágenes redondeadas */
+.rounded-image {
+  width: 82%;
+  height: 500px; /* Ajusta la altura según sea necesario */
+  background-size: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 60px;
+  margin-left: 50px;
+}
+
+.rounded-image:hover {
+  filter: brightness(90%);
+}

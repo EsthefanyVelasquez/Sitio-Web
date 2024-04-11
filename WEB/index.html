@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Compra</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a href="Pagina principal.html">Inicio</a> |
+      <a href="#">Juegos</a> | <a href="Reviews.html">Reviews</a>
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </header>
+  <div class="cuadrados">
+    <div class="cuadrado">
+      <img src="Icono Perfil.svg" alt="Icono Perfil" class="icono-cuadrado">
+    </div>
+    <div class="cuadrado store-cuadrado">
+      <label for="toggle-rectangulo">
+        <img src="Icono store.svg" alt="Icono Store" class="icono-cuadrado">
+      </label>
+      <input type="checkbox" id="toggle-rectangulo" class="toggle-checkbox">
+      <div class="rectangulo">
+        <button id="comprar-todos" class="button_slide slide_down">Comprar</button>
+        <div id="juegos-comprados"></div> <!-- Lista de juegos comprados -->
+      </div>
+    </div>
+  </div>
+  <h1 class="titulo-juegos">JUEGOS</h1>
+  <section class="contenedor-rectangulos">
+    <div class="rectangulos-verticales">
+      <!-- Rectángulo de juego: Smite -->
+      <div class="rectangulo rectangulo-1">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="Smite.jpg" alt="Smite" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: Fortnite -->
+      <div class="rectangulo rectangulo-2">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="Fortnite.jpg" alt="Fortnite" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: GtaV -->
+      <div class="rectangulo rectangulo-3">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="GtaV.jpg" alt="GtaV" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: cs -->
+      <div class="rectangulo rectangulo-4">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="cs.jpg" alt="cs" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: Call -->
+      <div class="rectangulo rectangulo-5">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="Call.jpg" alt="Call" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: cyber -->
+      <div class="rectangulo rectangulo-6">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="cyber.jpg" alt="cyber" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: dragonball -->
+      <div class="rectangulo rectangulo-7">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="dragonball.jpg" alt="dragonball" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: reddead -->
+      <div class="rectangulo rectangulo-8">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="reddead.jpg" alt="reddead" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: TheLastOf -->
+      <div class="rectangulo rectangulo-9">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="TheLastOf Us.png" alt="TheLastOf" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: Halo -->
+      <div class="rectangulo rectangulo-10">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="Halo.jpg" alt="Halo" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: HogwartsLegacy -->
+      <div class="rectangulo rectangulo-11">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="HogwartsLegacy.png" alt="HogwartsLegacy" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulode juego: God -->
+      <div class="rectangulo rectangulo-12">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="God.jpg" alt="God" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: Baldursgate -->
+      <div class="rectangulo rectangulo-13">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="Baldursgate.jpg" alt="Baldursgate" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: Assasins -->
+      <div class="rectangulo rectangulo-14">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="Assasins.jpg" alt="Assasins" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: FC -->
+      <div class="rectangulo rectangulo-15">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="FC.jpg" alt="FC" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- Rectángulo de juego: diablo -->
+      <div class="rectangulo rectangulo-16">
+        <a href="url_de_la_tienda" class="tienda-link"> <!-- Enlace a la tienda -->
+          <img src="diablo.jpg" alt="diablo" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p class="footer-text">
+      <a href="#">Sobre nosotros</a> |
+      <a href="#">Contáctanos</a> |
+      <a href="#">Ayuda</a>
+    </p>
+  </footer>
+  <button id="scroll-to-top">&#8593;</button>
+  <script src="script.js"></script>
+</body>
+</html>
