@@ -1,14 +1,14 @@
 body {
   width: 100%;
   height: auto;
-  background-image: url('fondo.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
-  font-family: "Roboto Mono", system-ui; 
+  font-family: "Roboto Mono", system-ui;
 }
 
 header {
@@ -30,8 +30,8 @@ header a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin: 0 10px;
-    font-size: 20px; 
-    font-family: "Roboto Mono", system-ui; 
+    font-size: 20px;
+    font-family: "Roboto Mono", system-ui;
   }
 
 header input {
@@ -41,7 +41,7 @@ header input {
     width: 200px;
     background-color: rgba(255, 255, 255, 0.5);
     color: white;
-    font-size: 20px; 
+    font-size: 20px;
   }
 
 header {
@@ -112,8 +112,8 @@ nav ul li button,
 
 .image-container img,
 .rectangle {
-  width: 302px;
-  height: 75px;
+  width: 100%;
+  height: auto;
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -126,7 +126,7 @@ nav ul li button,
 }
 
 .aside-container img {
-  width: 228px;
+  width: 100%;
   height: auto;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -174,8 +174,8 @@ header::after {
 }
 
 .rectangle {
-  width: 800px;
-  height: 350px;
+  width: 100%;
+  height: auto;
   background-color: #fff;
   margin: 20px auto;
   top: 40px;
@@ -187,16 +187,31 @@ header::after {
 }
 /* Estilos para las imágenes redondeadas */
 .rounded-image {
-  width: 82%;
-  height: 500px; /* Ajusta la altura según sea necesario */
+  width: 100%;
+  height: auto; /* Ajusta la altura según sea necesario */
   background-size: cover;
   margin-bottom: 15px;
   border-radius: 10px;
   overflow: hidden;
-  margin-right: 60px;
-  margin-left: 50px;
 }
 
 .rounded-image:hover {
   filter: brightness(90%);
+}
+
+/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+@media screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content > * {
+    flex: 1 1 50%; /* Divide el contenido en dos columnas en pantallas grandes */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content > * {
+    flex: 1 1 33.333%; /* Divide el contenido en tres columnas en pantallas extra grandes */
+  }
 }
