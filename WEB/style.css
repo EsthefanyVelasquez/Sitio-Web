@@ -350,11 +350,6 @@ footer .footer-text a:hover {
 .ver-mas-button:hover:after {
   transform: translateX(-9%) translateY(-25%) rotate(45deg);
 
-  /* Ajustes para pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-  .rectangulo {
-    width: 100%; /* Ajusta el ancho al 100% para adaptarse a pantallas más pequeñas */
-  }
 }
 
 }
