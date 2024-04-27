@@ -1,0 +1,111 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Compra</title>
+  <link rel="stylesheet" href="comprar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a href="Pagina principal.html">Inicio</a> |
+      <a href="http://127.0.0.1:5500/index.html">Juegos</a> | <a href="Reviews.html">Reviews</a>
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </header>
+  <div class="cuadrados">
+    <div class="cuadrado">
+      <img src="Icono Perfil.svg" alt="Icono Perfil" class="icono-cuadrado">
+    </div>
+    <div class="cuadrado store-cuadrado">
+      <label for="toggle-rectangulo">
+        <img src="Icono store.svg" alt="Icono Store" class="icono-cuadrado">
+      </label>
+      <input type="checkbox" id="toggle-rectangulo" class="toggle-checkbox">
+      <div class="rectangulo">
+        <button id="comprar-todos" class="button_slide slide_down">Comprar</button>
+        <div id="juegos-comprados"></div> <!-- Lista de juegos comprados -->
+      </div>
+    </div>
+  </div>
+  <h1 class="titulo-juegos">Tienda Virtual</h1>
+  <section class="contenedor-rectangulos">
+    <div class="rectangulos-verticales">
+
+      <!-- Rectángulo de juego: Smite -->
+      <div class="rectangulo rectangulo-1">
+        <a href="url_de_la_tienda" class="tienda-link">
+          <img src="Smite.jpg" alt="Smite" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+        <div class="texto-precio">Smite2 COL$153.000 </div> <!-- Agregado -->
+      </div>
+
+      <div class="cuadro-morado">
+        <div class="info-box">
+          <span>Contacto:</span>
+          <input type="text" placeholder="Escribe tu correo aquí">
+        </div>
+        <div class="info-box">
+          <span>Nombre:</span>
+          <input type="text" placeholder="Escribe tu Nombre aquí">
+        </div>
+        <div class="info-box">
+            <span>Apellido:</span>
+            <input type="text" placeholder="Escribe tu apellido aquí">
+          </div>
+          <div class="linea"></div>
+          <div class="entrega-texto">
+            <span>Entrega:</span>
+          </div>
+          <div class="info-box">
+            <span>País:</span>
+            <input type="text" placeholder="Escribe tu país aquí">
+          </div>
+          <div class="info-box">
+            <span>Cédula:</span>
+            <input type="text" placeholder="Escribe tu Cédula aquí">
+          </div>
+          <div class="info-box">
+            <span>Dirección:</span>
+            <input type="text" placeholder="Escribe tu Dirección aquí">
+          </div>
+          <div class="info-box">
+            <span>Casa/Apartamento:</span>
+            <input type="text" placeholder=>
+          </div>
+          <div class="info-box">
+            <span>Teléfono:</span>
+            <input type="text" placeholder="Escribe tu Teléfono aquí">
+          </div>
+          <div class="linea"></div>
+          <div class="entrega-texto">
+            <span>Métodos de Pago:</span>
+          </div>
+          <div class="imagen-pago">
+            <img src="visa master.png" 
+        </div>
+          <div class="opciones-pago">
+            <button class="boton-pago" onclick="seleccionarMetodo('credito')">Crédito</button>
+            <button class="boton-pago" onclick="seleccionarMetodo('debito')">Débito</button>
+          </div>
+      </div>
+     
+  </section>
+  <footer>
+    <p class="footer-text">
+      <a href="#">Sobre nosotros</a> |
+      <a href="#">Contáctanos</a> |
+      <a href="#">Ayuda</a>
+    </p>
+  </footer>
+  <button id="scroll-to-top">&#8593;</button>
+  <script src="script.js"></script>
+</body>
+</html>
