@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra</title>
+    <link rel="stylesheet" href="comprar.css">
+    <style>
+         .rectangulo-blanco {
+            background-color: rgba(255, 255, 255, 0.678);
+            padding: 60px 40px;
+            margin: 20px 100px;
+            border-radius: 10px;
+        }
+        .texto-blanco {
+            color: white; 
+            margin: 20px 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="Pagina principal.html">Inicio</a> |
+            <a href="http://127.0.0.1:5500/index.html">Juegos</a> | <a href="Reviews.html">Reviews</a>
+            <input type="text" placeholder="Buscar...">
+        </div>
+    </header>
+    <div class="confirmacion">
+        <h1 class="texto-blanco">Gracias por tu compra</h1>
+        <p class="texto-blanco">Hemos recibido tu información y procesaremos tu pedido lo antes posible.</p>
+        <div class="rectangulo-blanco">
+            <p>Contacto: <span id="contacto"></span></p>
+            <p>Nombre: <span id="nombre"></span></p>
+            <p>Apellido: <span id="apellido"></span></p>
+            <p>País: <span id="pais"></span></p>
+            <p>Cédula: <span id="cedula"></span></p>
+            <p>Dirección: <span id="direccion"></span></p>
+            <p>Casa/Apartamento: <span id="casa"></span></p>
+            <p>Teléfono: <span id="telefono"></span></p>
+            <p>Método de Pago: <span id="metodo_pago"></span></p>
+        </div>
+        <a href="index.html" class="button_slide slide_down">Volver a la tienda</a>
+    </div>
+    <footer>
+        <p class="footer-text">
+            <a href="#">Sobre nosotros</a> |
+            <a href="#">Contáctanos</a> |
+            <a href="#">Ayuda</a>
+        </p>
+    </footer>
+    <button id="scroll-to-top">&#8593;</button>
+    <script>
+        // Función para obtener parámetros de la URL
+        function getParameterByName(name) {
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var url = window.location.href;
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Asignar valores a los elementos del HTML
+        document.getElementById('contacto').innerText = getParameterByName('contacto');
+        document.getElementById('nombre').innerText = getParameterByName('nombre');
+        document.getElementById('apellido').innerText = getParameterByName('apellido');
+        document.getElementById('pais').innerText = getParameterByName('pais');
+        document.getElementById('cedula').innerText = getParameterByName('cedula');
+        document.getElementById('direccion').innerText = getParameterByName('direccion');
+        document.getElementById('casa').innerText = getParameterByName('casa');
+        document.getElementById('telefono').innerText = getParameterByName('telefono');
+        document.getElementById('metodo_pago').innerText = getParameterByName('metodo_pago');
+    </script>
+</body>
+</html>
+
+</html>

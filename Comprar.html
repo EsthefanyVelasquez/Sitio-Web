@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Compra</title>
+  <link rel="stylesheet" href="comprar.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <style>
+    .hidden {
+      display: none;
+    }
+    .opciones-pago form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .opciones-pago label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .opciones-pago input, .opciones-pago select {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .opciones-pago button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .opciones-pago button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a href="Pagina principal.html">Inicio</a> |
+      <a href="http://127.0.0.1:5500/index.html">Juegos</a> | <a href="Reviews.html">Reviews</a>
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </header>
+  <div class="cuadrados">
+    <div class="cuadrado">
+      <img src="Icono Perfil.svg" alt="Icono Perfil" class="icono-cuadrado">
+    </div>
+    <div class="cuadrado store-cuadrado">
+      <label for="toggle-rectangulo">
+        <img src="Icono store.svg" alt="Icono Store" class="icono-cuadrado">
+      </label>
+      <input type="checkbox" id="toggle-rectangulo" class="toggle-checkbox">
+      <div class="rectangulo">
+        <div id="juegos-comprados"></div> <!-- Lista de juegos comprados -->
+        <button id="comprar-todos" class="button_slide slide_down">Comprar Todos</button> <!-- Botón "Comprar Todos" -->
+      </div>
+    </div>
+  </div>
+  <h1 class="titulo-juegos">Tienda Virtual</h1>
+  <section class="contenedor-rectangulos">
+    <div class="rectangulos-verticales">
+      <!-- Rectángulo de juego: Smite -->
+      <div class="rectangulo rectangulo-1">
+        <a href="url_de_la_tienda" class="tienda-link">
+          <img src="Smite.jpg" alt="Smite" class="imagen-rectangulo">
+        </a>
+        <div class="overlay">
+          <button class="ver-mas-button" data-target="descripcion.html">Ver más</button>
+          <button class="comprar-button">Comprar</button>
+        </div>
+        <div class="texto-precio">Smite2 COL$153.000 </div> <!-- Agregado -->
+      </div>
+      <form id="formulario-compra" action="recibo.html" method="GET">
+        <div class="cuadro-morado">
+          <div class="info-box">
+            <span>Contacto:</span>
+            <input type="text" name="contacto" placeholder="Escribe tu correo aquí">
+          </div>
+          <div class="info-box">
+            <span>Nombre:</span>
+            <input type="text" name="nombre" placeholder="Escribe tu Nombre aquí">
+          </div>
+          <div class="info-box">
+            <span>Apellido:</span>
+            <input type="text" name="apellido" placeholder="Escribe tu apellido aquí">
+          </div>
+          <div class="linea"></div>
+          <div class="entrega-texto">
+            <span>Entrega:</span>
+          </div>
+          <div class="info-box">
+            <span>País:</span>
+            <input type="text" name="pais" placeholder="Escribe tu país aquí">
+          </div>
+          <div class="info-box">
+            <span>Cédula:</span>
+            <input type="text" name="cedula" placeholder="Escribe tu Cédula aquí">
+          </div>
+          <div class="info-box">
+            <span>Dirección:</span>
+            <input type="text" name="direccion" placeholder="Escribe tu Dirección aquí">
+          </div>
+          <div class="info-box">
+            <span>Casa/Apartamento:</span>
+            <input type="text" name="casa" placeholder="Escribe tu Casa/Apartamento aquí">
+          </div>
+          <div class="info-box">
+            <span>Teléfono:</span>
+            <input type="text" name="telefono" placeholder="Escribe tu Teléfono aquí">
+          </div>
+          <div class="linea"></div>
+          <div class="entrega-texto">
+            <span>Métodos de Pago:</span>
+          </div>
+          <div class="imagen-pago">
+            <img src="visa master.png" alt="Métodos de pago">
+          </div>
+          <div class="opciones-pago">
+            <button type="button" class="boton-pago" onclick="mostrarFormularioPago('credito')">Crédito</button>
+            <button type="button" class="boton-pago" onclick="mostrarFormularioPago('debito')">Débito</button>
+          </div>
+
+          <div id="formulario-pago" class="hidden">
+            <div class="opciones-pago">
+                <form action="guardarpago.php" method="post">
+                    <label for="nombre">Nombre en la tarjeta:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="tipo">Tipo de tarjeta:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="Credito">Crédito</option>
+                        <option value="Debito">Débito</option>
+                    </select>
+        
+                    <label for="numero_tarjeta">Número de tarjeta:</label>
+                    <input type="text" id="numero_tarjeta" name="numero_tarjeta" maxlength="16" required>
+        
+                    <label for="fecha_expiracion">Fecha de expiración:</label>
+                    <input type="month" id="fecha_expiracion" name="fecha_expiracion" required>
+        
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" maxlength="4" required>
+        
+                    <button type="submit" class="boton-pago">Guardar</button>
+                </form>
+            </div>
+          </div>
+          <input type="hidden" name="metodo_pago" id="metodo_pago">
+          <button type="submit" id="comprar-todos-formulario" class="button_slide slide_down">Comprar Todos</button> <!-- Botón "Comprar Todos" -->
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p class="footer-text">
+      <a href="#">Sobre nosotros</a> |
+      <a href="#">Contáctanos</a> |
+      <a href="#">Ayuda</a>
+    </p>
+  </footer>
+  <button id="scroll-to-top">&#8593;</button>
+
+  <script>
+    function seleccionarMetodo(metodo) {
+      document.getElementById('metodo_pago').value = metodo;
+    }
+
+    function mostrarFormularioPago(metodo) {
+      seleccionarMetodo(metodo);
+      document.getElementById('formulario-pago').classList.remove('hidden');
+    }
+
+    document.getElementById('comprar-todos').addEventListener('click', function() {
+      window.location.href = 'recibo.html';
+    });
+
+    document.getElementById('comprar-todos-formulario').addEventListener('click', function() {
+      window.location.href = 'recibo.html';
+    });
+  </script>
+</body>
+</html>
+
+

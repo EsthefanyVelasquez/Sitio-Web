@@ -1,0 +1,314 @@
+body {
+  width: 100%;
+  height: auto;
+  background-image: url('fondo.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", system-ui; 
+}
+
+header {
+  background-color: 0;
+  color: white;
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #043945;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    font-size: 1.5em; /* Cambiado a una unidad relativa */
+    font-family: "Roboto Mono", system-ui; 
+}
+
+header input {
+    padding: 0.5em; /* Cambiado a una unidad relativa */
+    border: 0 solid #ccc;
+    border-radius: 6px;
+    width: 10em; /* Cambiado a una unidad relativa */
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 1em; /* Cambiado a una unidad relativa */
+}
+
+header {
+    background-color: 0;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.content h1 {
+  color: #fff;
+  text-align: left;
+  margin-left: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li button,
+.search-bar {
+  background-color: #338598;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-bar::placeholder {
+  color: #fff;
+}
+
+.image-placeholder {
+  width: 827px;
+  height: 400px;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-container img,
+.rectangle {
+  width: 302px;
+  height: 75px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 190px;
+}
+
+.aside-container img {
+  width: 228px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #338598;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-decoration: underline;
+}
+
+.flex-container {
+  display: flex;
+  align-items: right;
+}
+
+.rectangle {
+  width: 800px;
+  height: 350px;
+  background-color: #fff;
+  margin: 20px auto;
+  top: 40px;
+  position: relative;
+  margin-right: 60px;
+  margin-left: 50px;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/517dab39-822a-4aec-87c3-a5e5ef70327a/d8fjhgz-53e7316a-bab0-47fb-bd2c-62b6133465c0.png/v1/fill/w_1192,h_670,q_70,strp/smite_no_god_wins_alone_wallpaper_by_utitake_d8fjhgz-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzUxN2RhYjM5LTgyMmEtNGFlYy04N2MzLWE1ZTVlZjcwMzI3YVwvZDhmamhnei01M2U3MzE2YS1iYWIwLTQ3ZmItYmQyYy02MmI2MTMzNDY1YzAucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.sULzsH_8B9mjnyq_9yCs8tVkm-VlogHuLnAOkdccn5A');
+  background-size: cover;
+}
+/* Estilos para las imágenes redondeadas */
+.rounded-image {
+  width: 82%;
+  height: 500px; /* Ajusta la altura según sea necesario */
+  background-size: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 60px;
+  margin-left: 50px;
+}
+
+.rounded-image:hover {
+  filter: brightness(90%);
+}
+
+/* Reglas de medios para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Cambios en las propiedades para dispositivos móviles */
+  .rounded-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 0;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .rectangle {
+    width: 100%;
+    margin: 20px auto;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .image-container img,
+  .rectangle {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 0;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    border: 1px solid #000000;
+    padding: 20px;
+    display: block; /* Mostrar el popup inmediatamente */
+  }
+  
+  .popup button#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .popup p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+  
+  a {
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 0;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+.cookie-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cookie-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cookie-button:hover {
+    background-color: #45a049;
+}
+
+.cookie-link {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.cookie-link:hover {
+    text-decoration: underline;
+}
+
+}
