@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JuegosTop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Pagina principal.css">
+  <style>
+    /* Reglas de medios para dispositivos móviles */
+    @media (max-width: 600px) {
+      /* Cambios en las propiedades para dispositivos móviles */
+      .rounded-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15%;
+        border-radius: 0;
+        overflow: hidden;
+      }
+    }
+
+    /* Estilos para el popup de cookies */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(46, 16, 155, 0.719);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      display: block; /* Mostrar el popup inmediatamente */
+      z-index: 1000; /* Mostrar el popup encima de otros elementos */
+    }
+
+    .cookie-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cookie-button {
+      background-color: #6600aa;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .cookie-button:hover {
+      background-color: #ad00fd;
+    }
+
+    .cookie-link {
+      color: #fdfaff;
+      text-decoration: none;
+    }
+
+    .cookie-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <header>
+        <div class="contenedor">
+          <a href="descripcion.html">Descripción</a> |
+          <a href="index.html">Juegos</a> |
+          <a href="Reviews.html">Reviews</a>
+          <input type="text" placeholder="Buscar...">
+        </div>
+      </header>
+      <div class="image-container">
+        <div class="rectangle"></div> <!-- Nuevo rectángulo -->
+        <div class="aside-container">
+          <h2>Top games</h2>
+          <img src="https://i.blogs.es/dfbccc/trucosgtavps4/1366_521.jpg" alt="Imagen de tamaño W500xH75">
+          <img src="https://s1.1zoom.me/b5050/559/310407-alexfas01_2560x1440.jpg" alt="Descripción de la imagen">
+          <img src="https://esports.as.com/2020/05/12/valorant/VALORANT_1354374560_392611_1440x600.png" alt="Descripción de la imagen">
+        </div>
+      </div>
+      <h1>ARTÍCULOS</h1>
+      <main>
+        <section>
+          <article>
+            <div class="rounded-image" style="background-image: url('https://img2-levelup.buscafs.com/835040/835040.png');"></div>
+            <h3 style="text-align: center;">Nintendo Switch 2: Los posibles juegos de lanzamiento para la consola</h3>
+          </article>
+          <article>
+            <div class="rounded-image" style="background-image: url('https://c4.wallpaperflare.com/wallpaper/379/562/484/pyramid-head-artwork-video-games-silent-hill-wallpaper-preview.jpg');"></div>
+            <h3 style="text-align: center;">Silent Hill 2: ¿A quién le hablan Konami y Bloober?</h3>
+          </article>
+          <article>
+            <div class="rounded-image" style="background-image: url('https://i0.wp.com/xxboxnews.blob.core.windows.net/prod/sites/4/2KSMKT_WWE2K18_TITLED_HERO_ART_1920x1080-hero-hero.png?resize=940%2C528&ssl=1');"></div>
+            <h3 style="text-align: center;">Previo: WWE 2K24 es un tributo a WrestleMania y al wrestling en general</h3>
+          </article>
+          <article>
+            <div class="rounded-image" style="background-image: url('https://pslegends.com/wp-content/uploads/2024/03/tales-of-kenzera-zau-keyart-1024x579.jpg');"></div>
+            <h3 style="text-align: center;">Tales of Kenzera ZAU es divertido porque entiende a los metroidvania</h3>
+          </article>
+        </section>
+      </main>
+      <div class="footer">
+        <button>Sobre Nosotros</button>
+        <button>Contactenos</button>
+        <button>Soporte</button>
+      </div>
+      <button class="home-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">&#9650;</button>
+    </div>
+  </div>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <h2>Política de Cookies</h2>
+      <p>
+        Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas nuestra política de cookies.
+      </p>
+      <button id="accept-cookies" class="cookie-button">Aceptar</button>
+      <button id="decline-cookies" class="cookie-button">Rechazar</button>
+      <a href="cookies.html" class="cookie-link">Más información</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptCookiesButton = document.getElementById('accept-cookies');
+      const declineCookiesButton = document.getElementById('decline-cookies');
+
+      // Mostrar el banner de cookies siempre
+      cookieBanner.style.display = 'block';
+
+      acceptCookiesButton.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+      });
+
+      declineCookiesButton.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookieBanner.style.display = 'none';
+      });
+    });
+  </script>
+  
+  <script src="pagina principal.js"></script>
+</body>
+</html>
+
